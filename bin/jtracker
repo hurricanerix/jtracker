@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+import argparse
+
+from libjtracker.player import Player
+
+
+def main():
+    print('parse args')
+
+    parser = argparse.ArgumentParser(
+        description='Plays *.jt files (a JSON variant of MOD).')
+    parser.add_argument('filename', nargs=1,
+                        help='file to be played')
+
+    args = parser.parse_args()
+
+    p = Player(args.filename)
+
+    p.play()
+
+
+if __name__ == '__main__':
+    main()

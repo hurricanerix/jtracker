@@ -1,0 +1,6 @@
+autopep8
+numpy
+pylint
+scipy
+sounddevice
+soundfile
